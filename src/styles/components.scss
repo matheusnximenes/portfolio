@@ -1,0 +1,128 @@
+.section {
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+    &__title {
+        color: #FFf;
+        padding: 0 1rem;
+        text-transform: uppercase;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: " ";
+            top: 3.5rem;
+            left: 0;
+            width: 2rem;
+            border-bottom: 4px solid var(--border-color);
+        }
+    }
+    &__description {
+        padding: .5rem 1.5rem 1rem 1.5rem;
+    }
+
+    .about__subsection {
+        margin-top: 3rem;
+
+        p {
+            padding-top: 1.5rem;
+        }
+    }
+}
+
+.cards {
+    display: flex;
+    padding: 2rem 0 ;
+    overflow-y: hidden;
+    overflow-x: auto;
+   
+}
+
+.card {
+   
+    &__image {
+        height: 450px;
+        width: 280px;
+        border: 1px solid var(--border-color);
+        background-color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        svg { fill : #fff}
+    }
+
+    &__details {
+        padding-right: 1rem;
+
+        h3 {
+            font-weight: 400;
+            padding: 1rem 0 .5rem 0;
+        }
+
+        p {
+            font-size: .8rem;
+        }
+    }
+}
+
+.contact__list {
+    padding: 1.5rem 0;
+    li {
+        list-style: none;
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25rem;
+    
+    .form__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        
+        .form__column {
+            flex-grow: 1;
+            border: 1px solid var(--border-color);
+
+            @mixin input {
+                width: 100%;
+                border: 0;
+                background-color: transparent;
+                padding: .8rem;
+                border-radius: 0;
+                
+                &::placeholder {
+                    color: #FFF;
+                    opacity: 1; /* Firefox */
+                }
+            }
+
+            label {
+                display: none;
+            }
+            input {
+                @include input;
+            }
+            textarea {
+                @include input;
+            }
+        }
+    }
+
+    .form__button {
+        margin-top: 1rem;
+        border: 1px solid #fff;
+        padding: 1rem;
+        background-color: black;
+    }
+
+}
