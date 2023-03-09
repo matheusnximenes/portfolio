@@ -142,8 +142,8 @@ export default function Home() {
             <div className="about__subsection">
               <h3>How is Matheus Ximenes?</h3>
               <p>
-                Hey! I'm Matheus Ximenes a proud Brazilian, Canada resident, and
-                parent of two lovely girls. My heart is constantly divided
+                Hey! I am Matheus Ximenes a proud Brazilian, Canada resident,
+                and parent of two lovely girls. My heart is constantly divided
                 between Engineering (Profession) and Graphic Design (Side
                 Projects). On one side is my love for coding applications,
                 planning/developing websites, and producing coding solutions
@@ -196,7 +196,7 @@ export default function Home() {
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
               sint ad omnis!"
           >
-            <p>We can do so much together. Let’s chat.</p>
+            <p>We can do so much together. Lets chat.</p>
             <ContactInfo />
             <ContactForm />
           </Section>
