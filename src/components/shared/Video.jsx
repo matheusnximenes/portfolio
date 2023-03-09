@@ -2,7 +2,7 @@ import React from 'react'
 
 const Video = () => {
   return (
-    <div className="about__subsection">
+    <div className="about__subsection-video">
               <iframe
                 width="640"
                 height="390"
