@@ -1,6 +1,7 @@
 :root{
     --bg-color: #202024;
     --border-color: #B1A9A9;
+    --sencondary-color: #FF7A00;
 }
 
 .main {
@@ -15,16 +16,22 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 35%;
+        width: 40%;
         height: 100%;
         border-right: 1px solid var(--border-color);
+        overflow: hidden;
+        background-color: #17171E;
+        background-image: radial-gradient(#333 5%, transparent 6%);
+        background-size: 30px 30px;
+        background-position: 0 0, 30px 30px;
+        background-repeat: repeat;
     }
 
     &__content {
-        width: 75%;
+        width: 60%;
         height: 100%;
         overflow-y: auto;
-    
+        
     }
 }
 
@@ -49,21 +56,48 @@
         top: 1.5rem;
         right: .5rem;
         li {
+            display: flex;
             text-align: right;
             list-style: none;
-            padding: .5rem;
-            .icon {
-                border: 1px solid var(--border-color);
-                border-bottom: 0;
-                padding: 0.5rem;
-                margin-left: .5rem;
+            padding: .2rem .5rem;
 
-                &:last-child{
-                    border-bottom: 1px solid var(--border-color);
+            a {
+                .text {
+                    @include a11y-hidden;
                 }
-              
-            }
+                .icon {
+                    width: 2rem;
+                    height: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid var(--border-color);
+                    margin-left: .5rem;
+                    color: #fff;
+                    transition: all 0.3s ease-in-out;
+    
+                    &--active {
+                        transform: rotate(-30deg);
+                        border-radius: 50%;
+                        background-color: #fff;
+                        color: #333;
+                    }    
+                  
+                }
 
+                &:hover {
+                    color: var(--sencondary-color);
+
+                    .icon {
+                        border-color: var(--sencondary-color);
+                        color: var(--sencondary-color);
+                    }
+                }
+
+                
+            }
+            
+            
             
         }
 
@@ -72,27 +106,32 @@
 
 .promotion {
     position: relative;
+    margin: 20% 0 auto 0;
     width: 85%;
     padding: 1.5rem;
     font-size: 2rem;
     text-transform: uppercase;
     h1 {
-        font-weight: 400;
+        font-weight: 300;
         line-height: 3.5rem;
         span {
             font-weight: 700;
         }
-        
     }
-
-    
 }
 
 .footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     font-size: .8rem;
     font-weight: 400;
     padding: 1rem;
-    text-align: center;
     border-top: 1px solid var(--border-color);
+
+    .handmade {
+        color: var(--sencondary-color);
+    }
+    
 }
 

@@ -1,69 +1,65 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { AboutSVG, CodeSVG, ContactSVG, ProjectsSVG, UxUiSVG } from "../SvgExporter";
+
+const MENU = [
+  "about", "code", "uxui", "projects", "contact"
+]
 
 const Header = () => {
+  const [active, setActive] = useState(MENU[0])
   return (
     <header className="header">
       <div className="header__brand">
-      <Image
-        src="/brand.svg"
-        alt="Matheus Ximenes Brand"
-        width={140}
-        height={27}
-        priority
-      />
+        <Image
+          src="/brand/brand.svg"
+          alt="Matheus Ximenes Brand"
+          width={187}
+          height={36}
+          priority
+        />
       </div>
       <nav className="header__navigation">
         <ul>
           <li>
-            <a href="#about">About<span className="icon">
-                <Image
-        src="/about.svg"
-        alt="About"
-        width={14}
-        height={14}
-        priority
-      /></span></a>
+            <a href="#about" onClick={() => setActive(MENU[0])}>
+              <span className="text">About</span>
+              <span className={`icon ${active === MENU[0] ? `icon--active` : ``}`}>
+                <AboutSVG/>
+              </span>
+            </a>
           </li>
           <li>
-            <a href="#code">Code<span className="icon">
-                <Image
-        src="/code.svg"
-        alt="About"
-        width={14}
-        height={14}
-        priority
-      /></span></a>
+            <a href="#code" onClick={() => setActive(MENU[1])}>
+              <span className="text">Code</span>
+              <span className={`icon ${active === MENU[1] ? `icon--active` : ``}`}>
+                <CodeSVG/>
+              </span>
+            </a>
           </li>
           <li>
-            <a href="#ux&ui">UX/UI<span className="icon">
-                <Image
-        src="/uxui.svg"
-        alt="About"
-        width={14}
-        height={14}
-        priority
-      /></span></a>
+            <a href="#ux&ui" onClick={() => setActive(MENU[2])}>
+              <span className="text">UX/UI</span>
+              <span className={`icon ${active === MENU[2] ? `icon--active` : ``}`}>
+              <UxUiSVG/>
+              </span>
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects<span className="icon">
-                <Image
-        src="/projects.svg"
-        alt="About"
-        width={14}
-        height={14}
-        priority
-      /></span></a>
+            <a href="#projects" onClick={() => setActive(MENU[3])}>
+            <span className="text">Projects</span>
+              <span className={`icon ${active === MENU[3] ? `icon--active` : ``}`}>
+              <ProjectsSVG/>
+              </span>
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact<span className="icon">
-                <Image
-        src="/contact.svg"
-        alt="About"
-        width={14}
-        height={14}
-        priority
-      /></span></a>
+            <a href="#contact" onClick={() => setActive(MENU[4])}>
+              <span className="text">Contact</span>
+              <span className={`icon ${active === MENU[4] ? `icon--active` : ``}`}>
+              <ContactSVG/>
+              </span>
+            </a>
           </li>
         </ul>
       </nav>

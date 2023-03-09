@@ -4,7 +4,7 @@ import Card from './Card'
 const CardList = ({list}) => {
   return (
     <div className='cards'>
-        {list.map(c => (<Card key={c.id} title={c.title} description={c.description} img={c.img} />))}
+        {list.map(c => (<Card key={c.id} title={c.title} description={c.description} linkUrl={c.linkUrl} img={c.img} />))}
     </div>
   )
 }

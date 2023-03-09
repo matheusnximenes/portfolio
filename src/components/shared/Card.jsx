@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-const Card = ({ title, description, img, linkUrl }) => {
+const Card = ({ title, description, img, linkUrl, target }) => {
   return (
-    <a href={linkUrl} className="card">
+    <a href={linkUrl} target={target || "_blank"} className="card">
       <div className="card__image">
         <Image
           src={img.src}

@@ -4,8 +4,10 @@ import Header from "@/components/structure/Header";
 import Promotion from "@/components/structure/Promotion";
 import Footer from "@/components/structure/Footer";
 import Section from "@/components/shared/Section";
-import Card from "@/components/shared/Card";
 import CardList from "@/components/shared/CardList";
+import Video from "@/components/shared/Video";
+import ContactForm from "@/components/shared/ContactForm";
+import ContactInfo from "@/components/shared/ContactInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +24,10 @@ const DATA = {
       id: "u1",
       title: "GitHub",
       description: "Lorem ipsum dolor sit amet consectetur.",
-      linkUrl: "",
+      linkUrl: "https://github.com/matheusximenes",
       img: {
         description: "",
-        src: "./github.svg",
+        src: "./code/github.svg",
         width: 160,
         height: 160,
       },
@@ -34,10 +36,10 @@ const DATA = {
       id: "u2",
       title: "CodesandBox",
       description: "Lorem ipsum dolor sit amet consectetur.",
-      linkUrl: "",
+      linkUrl: "https://codesandbox.io/u/Ximenes",
       img: {
         description: "",
-        src: "./codesandbox.svg",
+        src: "./code/codesandbox.svg",
         width: 160,
         height: 160,
       },
@@ -51,7 +53,7 @@ const DATA = {
       linkUrl: "",
       img: {
         description: "",
-        src: "./codesandbox.svg",
+        src: "./code/codesandbox.svg",
         width: 160,
         height: 160,
       },
@@ -63,7 +65,7 @@ const DATA = {
       linkUrl: "",
       img: {
         description: "",
-        src: "./codesandbox.svg",
+        src: "./code/codesandbox.svg",
         width: 160,
         height: 160,
       },
@@ -77,7 +79,7 @@ const DATA = {
       linkUrl: "",
       img: {
         description: "",
-        src: "./codesandbox.svg",
+        src: "./code/codesandbox.svg",
         width: 160,
         height: 160,
       },
@@ -89,7 +91,7 @@ const DATA = {
       linkUrl: "",
       img: {
         description: "",
-        src: "./codesandbox.svg",
+        src: "./code/codesandbox.svg",
         width: 160,
         height: 160,
       },
@@ -101,7 +103,7 @@ const DATA = {
       linkUrl: "",
       img: {
         description: "",
-        src: "./codesandbox.svg",
+        src: "./code/codesandbox.svg",
         width: 160,
         height: 160,
       },
@@ -136,14 +138,7 @@ export default function Home() {
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
               sint ad omnis!"
           >
-            <div className="about__subsection">
-              <iframe
-                width="640"
-                height="390"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
-              ></iframe>
-            </div>
-
+            <Video />
             <div className="about__subsection">
               <h3>How is Matheus Ximenes?</h3>
               <p>
@@ -166,6 +161,8 @@ export default function Home() {
                 and NodeJS). Some years ago, I had work experience as Back End
                 Developer with PHP, Java, PostgreSQL, MySQL, and Windows Server.
               </p>
+
+              <p>Redbubble Store: </p>
             </div>
             <div className="about__skill-chart">Skills Chart</div>
           </Section>
@@ -186,7 +183,7 @@ export default function Home() {
             <CardList list={DATA.uxui} />
           </Section>
           <Section
-            id="projects&ui"
+            id="projects"
             title="Projects"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
               sint ad omnis!"
@@ -200,57 +197,8 @@ export default function Home() {
               sint ad omnis!"
           >
             <p>We can do so much together. Let’s chat.</p>
-            <ul className="contact__list">
-              <li>
-                If you wanna email me:{" "}
-                <span className="list__bold">mattximca@gmail.com</span>
-              </li>
-              <li>
-                If you wanna to hear my voice:{" "}
-                <span className="list__bold">+ 1 226 977 0251</span>
-              </li>
-              <li>
-                If you wanna to be influenced:{" "}
-                <span className="list__bold">@matheusximenes</span>
-              </li>
-              <li>
-                If you wanna to see me:{" "}
-                <span className="list__bold">
-                  I' ll be at Huron Lake eating sandwich over the sun.
-                </span>
-              </li>
-            </ul>
-            <form className="contact__form">
-              <div className="form__row">
-                <div className="form__column">
-                  <label htmlFor="">Name</label>
-                  <input type="text" placeholder="Name" />
-                </div>
-                <div className="form__column">
-                  <label htmlFor="">Phone</label>
-                  <input type="text" placeholder="Phone" />
-                </div>
-              </div>
-              <div className="form__row">
-                <div className="form__column">
-                  <label htmlFor="">Subject</label>
-                  <input type="text" placeholder="Subject" />
-                </div>
-                <div className="form__column">
-                  <label htmlFor="">Email</label>
-                  <input type="text" placeholder="Email" />
-                </div>
-              </div>
-              <div className="form__row">
-                <div className="form__column">
-                  <label htmlFor="">Message</label>
-                  <textarea rows={4} placeholder="Message" />
-                </div>
-              </div>
-              <button className="form__button" type="submit">
-                Message
-              </button>
-            </form>
+            <ContactInfo />
+            <ContactForm />
           </Section>
         </div>
       </main>
