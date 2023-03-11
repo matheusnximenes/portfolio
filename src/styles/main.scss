@@ -21,6 +21,10 @@
 
 ::root {
   @include preset-font;
+  
+}
+
+body, h1, h2, h3, p, footer, li {
   color: #fff;
 }
 

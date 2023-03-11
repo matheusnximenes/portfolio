@@ -8,6 +8,7 @@ import CardList from "@/components/shared/CardList";
 import Video from "@/components/shared/Video";
 import ContactForm from "@/components/shared/ContactForm";
 import ContactInfo from "@/components/shared/ContactInfo";
+import SkillChart from "@/components/shared/SkillChart";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,37 @@ const DATA = {
     {
       id: "u1",
       title: "React.js",
+      percentage: 100,
+    },
+    {
+      id: "u2",
+      title: "Next.js",
+      percentage: 90,
+    },
+    {
+      id: "u3",
+      title: "Vue.js",
+      percentage: 30,
+    },
+    {
+      id: "u4",
+      title: "HTML",
       percentage: 80,
+    },
+    {
+      id: "u5",
+      title: "CSS",
+      percentage: 70,
+    },
+    {
+      id: "u6",
+      title: "Sass",
+      percentage: 80,
+    },
+    {
+      id: "u7",
+      title: "Typescript",
+      percentage: 70,
     },
   ],
   code: [
@@ -161,10 +192,9 @@ export default function Home() {
                 and NodeJS). Some years ago, I had work experience as Back End
                 Developer with PHP, Java, PostgreSQL, MySQL, and Windows Server.
               </p>
-
+              <SkillChart list={DATA.skills} />
               <p>Redbubble Store: </p>
             </div>
-            <div className="about__skill-chart">Skills Chart</div>
           </Section>
           <Section
             id="code"

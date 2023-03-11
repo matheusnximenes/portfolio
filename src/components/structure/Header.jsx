@@ -19,6 +19,16 @@ const Header = () => {
           priority
         />
       </div>
+
+      <div className="header__brand--small">
+        <Image
+          src="/brand/brand_small.svg"
+          alt="Matheus Ximenes Brand"
+          width={50}
+          height={40}
+          priority
+        />
+      </div>
       <nav className="header__navigation">
         <ul>
           <li>
